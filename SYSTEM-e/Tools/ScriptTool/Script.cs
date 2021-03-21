@@ -377,7 +377,7 @@ namespace ScriptTool
                 throw new Exception("String count does not match");
             }
 
-            Encoding encoding = Encoding.GetEncoding("shift-jis");
+            Encoding encoding = Encoding.GetEncoding("gbk");
 
             for (int i = 0; i < translated.Count; i++)
             {
