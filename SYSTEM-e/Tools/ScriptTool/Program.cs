@@ -68,6 +68,7 @@ namespace ScriptTool
                         {
                             string textFilePath = Path.ChangeExtension(filePath, "txt");
                             string newFilePath = Path.GetDirectoryName(filePath) + @"\rebuild\" + Path.GetFileName(filePath);
+                            Directory.CreateDirectory(Path.GetDirectoryName(newFilePath));
                             Script script = new Script();
                             script.Load(filePath);
                             script.ImportString(textFilePath);
