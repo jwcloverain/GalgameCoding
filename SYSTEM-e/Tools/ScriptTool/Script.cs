@@ -390,7 +390,7 @@ namespace ScriptTool
                 }
 
                 int index = int.Parse(m.Groups[1].Value);
-                string text = m.Groups[2].Value;
+                string text = ReplaceCharacter(m.Groups[2].Value);
 
                 byte[] bytes = encoding.GetBytes(text);
                 int text_length = bytes.Length + 1;
@@ -419,6 +419,14 @@ namespace ScriptTool
 
                 Commands[index] = cmd;
             }
+        }
+
+        private static string ReplaceCharacter(string source)
+        {
+            source = source.Replace('≫', '〕');
+            source = source.Replace('≪', '〔');
+            source = source.Replace('・', '·');
+            return source;
         }
     }
 }
