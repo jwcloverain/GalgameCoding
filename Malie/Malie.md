@@ -34,8 +34,8 @@ void StreamIOMan_Setup()
   RegIo_CFI();             // register CFI 读加密文件。
   RegIo_CFO();             // register CFO 写加密文件。
   RegIo_MLS();             // register MLS
-  RegIo_ZLO();             // register ZLO ZLIB 解压。
-  RegIo_ZLI();             // register ZLI ZLIB 压缩。
+  RegIo_ZLO();             // register ZLO ZLIB 压缩。
+  RegIo_ZLI();             // register ZLI ZLIB 解压。
   RegIo_LFILE_I();         // register LFILE_I 以读方式打开文件。
 }
 ```
