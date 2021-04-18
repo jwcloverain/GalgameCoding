@@ -76,7 +76,7 @@ struct IO_PROVIDER
 	void* (*pfn_open)(const wchar_t* name, const wchar_t* iop);
 	void (*pfn_close)(void* fp);
 
-    wchar_t name[34];
+	wchar_t name[34];
 };
 ```
 
