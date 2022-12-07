@@ -25,7 +25,7 @@ namespace WaffleBmp
 
             var alpImage = File.ReadAllBytes(alpPath);
 
-            var alignedWidth = (bmpImage.Width + 3) & ~3;
+            var alignedWidth = bmpImage.Width;
 
             for (var y = 0; y < bmpImage.Height; y++)
             {
@@ -78,7 +78,7 @@ namespace WaffleBmp
 
             using (var image = srcImage.CloneAs<Rgba32>())
             {
-                var alignedWidth = (srcImage.Width + 3) & ~3;
+                var alignedWidth = srcImage.Width;
 
                 var alpImage = new byte[alignedWidth * srcImage.Height];
 
